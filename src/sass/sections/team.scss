@@ -1,0 +1,120 @@
+.team {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+      max-width: 380px;
+      text-align: center;
+      &--name {
+        color: #333333;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      &--description {
+        color: #999999;
+        font-family: $ff-secondary;
+        font-style: italic;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        margin-bottom: 60px;
+      }
+    }
+  }
+  &-description {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    color: #999999;
+    font-family: $ff-secondary;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 90px;
+  }
+}
+
+.img-wrap {
+  margin-bottom: 30px;
+  position: relative;
+  transition: 0.2s linear;
+}
+
+.overlay {
+  background-image: linear-gradient(
+    to top,
+    rgba(252, 227, 138, 0.9) 0%,
+    rgba(243, 129, 129, 0.9) 100%
+  );
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.team-list__item:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.team-list__item:hover .img-wrap {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0 0 #95e1d3;
+}
+
+.member-photo {
+  width: 380px;
+  height: 470px;
+}
+
+.social-list {
+  display: flex;
+
+  &__item {
+    transition: all 0.3s ease-in-out 0s;
+    &:not(:last-child) {
+      margin-right: 2px;
+    }
+    &--link {
+      width: 56px;
+      height: 56px;
+      background-color: #fce38a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease-in-out 0s;
+      border-radius: 10px;
+    }
+  }
+}
+
+.link__icon {
+  width: 26px;
+  height: 26px;
+  display: block;
+  fill: #f38181;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.social-list__item:hover .social-list__item--link {
+  background-color: #f38181;
+  border-radius: 50%;
+}
+
+.social-list__item:hover .link__icon {
+  fill: #fff;
+}

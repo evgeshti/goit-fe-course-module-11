@@ -1,0 +1,5 @@
+@mixin bcg($rp: no-repeat, $size: cover, $position: center) {
+  background-repeat: $rp;
+  background-size: $size;
+  background-position: $position;
+}
